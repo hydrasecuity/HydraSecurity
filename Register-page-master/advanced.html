@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Page</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media.css">
+    <link rel="icon" href="img/undraw_profile_pic_ic5t.svg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;0,900;1,700;1,900&display=swap"
+        rel="stylesheet">
+
+    <style>
+        .baba {
+            width: 150px;
+            height: 50px;
+            outline: none;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            background: #008cff;
+            color: #fff;
+            text-transform: uppercase;
+            font-weight: 600;
+            font-size: 16px;
+            letter-spacing: 2px;
+            margin: 10px 0;
+            transition: all 0.5s;
+            position: relative;
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+    <main class="main">
+        <div class="container">
+            <div class="forms">
+                <div class="sign__blog">
+
+                    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+                    <div id="pageloader">
+                        <img src="http://cdnjs.cloudflare.com/ajax/libs/semantic-ui/0.16.1/images/loader-large.gif"
+                            alt="processing..." />
+                    </div>
+
+                    <form method="POST" 
+                        action=""
+                        class="register" name="google-sheet" target="_blank" id="myform">
+
+                        <h2 class="form_title">Register</h1>
+                            <div class="form_steps">
+                                <div class="steps">
+                                    <p class="steps_title">Details</p>
+                                    <span class="steps_numb">1</span>
+                                </div>
+                                <div class="steps">
+                                    <p class="steps_title">Payment</p>
+                                    <span class="steps_numb">2</span>
+                                </div>
+                                <div class="steps">
+                                    <p class="steps_title">Confirm</p>
+                                    <span class="steps_numb step_end">3</span>
+                                </div>
+                            </div>
+                            <div class="register_content">
+                                <div class="form_pages">
+                                    <div class="form_page page_1">
+                                        <div class="input_item">
+                                            <input name="name" type="text" class="form_input"
+                                                oninvalid="this.classList.add('invalid')" required>
+                                            <label for="name" class="form_label"><i class="fas fa-user"></i>
+                                                Full Name</label>
+                                        </div>
+                                        <div class="input_item">
+                                            <input name="City" type="text" class="form_input"
+                                                oninvalid="this.classList.add('invalid')" required>
+                                            <label for="City" class="form_label"><i class="fas fa-map-marked"></i>
+                                                City</label>
+                                        </div>
+                                        <div class="input_item">
+                                            <input name="email" type="email" class="form_input form_email"
+                                                oninvalid="this.classList.add('invalid')" required>
+                                            <label for="email" class="form_label"><i class="fas fa-envelope"></i> Email
+                                                address</label>
+                                            <p class="error_email">Email is wrong</p>
+                                        </div>
+                                        <div class="input_item">
+                                            <input name="phone" type="number" class="form_input"
+                                                oninvalid="this.classList.add('invalid')" required>
+                                            <label for="phone" class="form_label"><i class="fas fa-phone"></i> Phone
+                                                number</label>
+                                        </div>
+                                        <button type="button" class="btn nextBtn">Next</button>
+                                    </div>
+                                    <div class="form_page page_2 page_password">
+
+                                        <p class="fa-border">Your Selected Course Price is 2499₹</p>
+                                        <p class="fa-sm">Pay Using</p>
+                                        <img src="https://www.proideators.com/wp-content/uploads/2019/09/QR-Code-payment-by-google-pay-phonepe-paytm-Jio-ProiDeators.jpg"
+                                            height="100px" width="300px">
+                                        <button onclick="openPayment()" class="baba" type="button">Pay Now</button>
+                                        <script>
+                                            function openPayment() {
+                                                window.open('https://paytm.me/pY6u-Hf', '_blank');
+                                            }
+                                        </script>
+
+                                        <p class=" steps steps_title">NOTE:- PLEASE CLICK A SCREEN SHOT OF A TRANSACTION
+                                        </p>
+                                        <div class="password__content">
+                                            <div class="password__indicator">
+                                                <span></span>
+                                            </div>
+                                            <!-- <ul class="password__info">
+                                                <li class="password__info__text"><i class="fas fa-check-circle"
+                                                        id="passWeak"></i> Minimum be at least 6 Characters</li>
+                                                <li class="password__info__text"><i class="fas fa-check-circle"
+                                                        id="passMedium"></i> Minimum be at least 1 Number</li>
+                                                <li class="password__info__text"><i class="fas fa-check-circle"
+                                                        id="passStrong"></i> Minimum be at least 1 Capital letter</li>
+                                            </ul> -->
+                                        </div>
+
+                                        <div class="password__content">
+                                            <div class="password__indicator">
+                                                <span></span>
+                                            </div>
+                                            <!-- <ul class="password__info">
+                                                <li class="password__info__text"><i class="fas fa-check-circle"
+                                                        id="passWeak"></i> Minimum be at least 6 Characters</li>
+                                                <li class="password__info__text"><i class="fas fa-check-circle"
+                                                        id="passMedium"></i> Minimum be at least 1 Number</li>
+                                                <li class="password__info__text"><i class="fas fa-check-circle"
+                                                        id="passStrong"></i> Minimum be at least 1 Capital letter</li>
+                                            </ul> -->
+                                        </div>
+                                        <div class="register_buttons">
+                                            <button type="button" class="btn backBtn" tabindex="-1">Back</button>
+                                            <button type="button" class="btn nextBtn" tabindex="-1">Next</button>
+                                        </div>
+                                    </div>
+
+                                    <div class="form_page page_3">
+                                        <p class="fa-sm">Upload Payment ScreenShot</p>
+                                        <div class="input_item input_uploader">
+                                            <div class="form__imgUploader">
+                                                <div class="form__wrapper">
+
+                                                    <div class="form__image">
+                                                        <img src="" alt="" class="form__img babaimg">
+                                                    </div>
+
+                                                    <div class="formUploader__content">
+                                                        <div class="formUploader__icon"><i
+                                                                class="fas fa-cloud-upload-alt"></i></div>
+                                                        <div class="formUploader__text">No photo Choosen, yet!</div>
+                                                    </div>
+                                                    <div class="formUploader__cancel"><i class="fas fa-times"></i></div>
+                                                    <div class="formUploader__fileName">
+                                                        <p>File name</p>
+                                                    </div>
+                                                </div>
+
+                                                <!-- <input type="file" > -->
+                                                <!-- This is an image element with an empty src and alt attribute -->
+
+                                                <input name="photo" type="file" class="imgUploader" accept="image/*"
+                                                    tabindex="-1" hidden id="input">
+                                                <!-- <img src="" alt="" class=""> -->
+                                            </div>
+                                        </div>
+                                        <div class="register_buttons">
+                                            <button type="button" class="btn backBtn" tabindex="-1">Back</button>
+                                            <input type="submit" value="Submit" class="btn ">
+
+
+
+                                            <!-- <button type="submit" class="btn register_button" tabindex="-1">Submit</button> -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="invalid_info">Something entered Wrong! Please check it Out</p>
+                    </form>
+
+                </div>
+            </div>
+
+            <div class="panels__blog">
+
+                <div class="panel left__panel">
+
+                    <div class="content">
+
+                        <h3 class="panel__title">HYDRA SECURITY</h3>
+                        <p class="panel__text">Register Yourself </p>
+                        <button class="button transparent" id="register__btn">Register</button>
+
+                    </div>
+                    <img src="img/undraw_Login_re_4vu2.svg" alt="" class="panel__img">
+                </div>
+
+                <div class="panel right__panel">
+
+                    <div class="content">
+
+                        <h3 class="panel__title">Provide Correct information</h3>
+                        <p class="panel__text">After Submitting our team will contact you</p>
+                        <button class="button transparent" id="signin__btn">Register</button>
+
+                    </div>
+                    <img src="img/undraw_authentication_fsn5.svg" alt="" class="panel__img">
+                </div>
+
+            </div>
+
+        </div>
+    </main>
+    <script src="script.js"></script>
+
+    <!-- <button>OK</button> -->
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbzezDB5EgeMbF0wkBoAUHbJD3meT-I6ITzoA7hQrl8jQ_1x2egO7gXtJ1OuNw-VIVc_9g/exec'
+        const form = document.forms['google-sheet']
+
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response => openThank())
+                .catch(error => console.error('Error!', error.message))
+
+        })
+    </script>
+
+    <script>
+        function openThank() {
+            alert("Thanks for Contacting us..! We Will Contact You Soon...");
+            window.open('../Thank.html', '_top');
+        }
+    </script>
+
+
+    <script>
+        // This line declares a variable called "url" and assigns it a value of "Api_Endpoint_Url"
+        let url = "https://script.google.com/macros/s/AKfycbw-kTTgoSIxiwNRGksqdxsIfxzAmYhwbuqRYtNtdkjdWggDQ6xzg8Cg_GibetbhMow7-Q/exec";
+        // This line declares a variable called "file" and assigns it the value of the first input element on the page
+        let file = document.querySelector("#input");
+        // This line declares a variable called "img" and assigns it the value of the first image element on the page
+        let img = document.querySelector(".babaimg");
+        // This line adds an event listener to the "change" event of the "file" input element
+        file.addEventListener('change', () => {
+            // This line creates a new FileReader object called "fr"
+            let fr = new FileReader();
+            // This line adds an event listener to the "loadend" event of the FileReader object
+            fr.addEventListener('loadend', () => {
+                // This line declares a variable called "res" and assigns it the result of the FileReader object
+                let res = fr.result;
+                // This line sets the "src" attribute of the "img" element to the value of "res"
+                img.src = res;
+                // This line splits the "res" variable into an array, using the string "base64," as the separator, and assigns the second element to a variable called "spt"
+                let spt = res.split("base64,")[1];
+                // This line creates an object called "obj" with three properties: "base64", "type", and "name"
+                let obj = {
+                    base64: spt,
+                    type: file.files[0].type,
+                    name: file.files[0].name
+                }
+                // This line sends a POST request to the URL specified in the "url" variable, with the "obj" object as the request body
+                fetch(url, {
+                    method: "POST",
+                    body: JSON.stringify(obj)
+                })
+                    // This line waits for the response from the server and converts it to text
+                    .then(r => r.text())
+                    // This line logs the response data to the console
+                    .then(data => console.log(data))
+
+            })
+            // This line reads the selected file as a data URL
+            fr.readAsDataURL(file.files[0])
+        })
+    </script>
+</body>
+
+</html>
